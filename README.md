@@ -1,6 +1,6 @@
 # AmazonIsbn
 
-TODO: Write a gem description
+This gem help you to get some attributes of your books from ISBN via Amazon Product Advertising API.
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+    
+    require 'amazon_isbn'
+    api = AmazonIsbn::API.new {
+      :associate_tag => 'YOUR_ASSOCIATE_TAG', 
+      :AWS_access_key_id => 'YOUR_AWS_ACCESS_KEY_ID',
+      :AWS_secret_key => 'YOUR_AWS_SECRET_KEY'
+    }
+    
+    api.get_by_isbn('ISBN_CODE_HERE')
+        
 
 ## Contributing
 
@@ -27,3 +36,6 @@ TODO: Write usage instructions here
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## LICENSE
+This gem is distributed under MIT License.
